@@ -63,7 +63,7 @@ In Windows Server 2012 or Windows Server 2012 R2, this MMC snap-in does not exis
     4. At command prompt, run the following wmic command together with the thumbprint value that you obtain in step 3:
 
         ```console
-        wmic /namespace:\\root\cimv2\TerminalServices PATH Win32_TSGeneralSetting Set SSLCertificateSHA1Hash="THUMBPRINT"
+        wmic /namespace:\\root\cimv2\TerminalServices PATH Win32_TSGeneralSetting Where "TerminalName='RDP-tcp'" Set SSLCertificateSHA1Hash="THUMBPRINT"
         ```
 
         The following screenshot is a successful example:
